@@ -218,7 +218,7 @@ footer{display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; pa
 :root[data-p="white"]{--night:#fbf8f3; --claret:#f1ebe2; --oxblood:#7a1630; --gold:#9a7630; --gold-soft:#7a1630; --fg:#2a1218; --paper:#fff; --hero-glow:#f2dfd3; --hero-a:#ffffff; --hero-b:#faf6f0; --hero-c:#f3ece2; --fade:253,251,247; --vig:236,226,214; --navsolid:253,251,247; --wave:176,84,102; --mesh-d:238,228,216; --mesh-l:255,255,255; --onhero:#2a1218; --sec:#f6f1e9; --sec-end:#f1ebe2; --res-glow:#efe3d6; --tile-a:#efe6da; --tile-b:#e2d3c0; --btn-a:#7a1630; --btn-b:#5a1022; --btn-fg:#fbf3e6; color-scheme:light}
 
 
-:root[data-p="white"] .venue{display:none}
+:root[data-p="white"] .venue{display:block; opacity:.2 !important; filter:grayscale(.35) sepia(.3) brightness(1.12) contrast(.85)}
 :root[data-p="white"] .room:nth-child(n) .art{background:linear-gradient(160deg,var(--tile-a),var(--tile-b))}
 :root[data-p="white"] .cap{color:rgba(42,18,24,.6)}
 :root[data-p="white"] .logo .br-word{color:var(--onhero)}
