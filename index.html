@@ -1089,8 +1089,10 @@ main>section#menu[id]{overflow:hidden}
   #spaces .room p{grid-row:5; margin-top:min(1.1rem,1.6vh); line-height:1.6}
   #spaces .room .meta{margin-bottom:min(.9rem,1.4vh)}
   @media(max-height:820px){
-    #spaces .rdots{flex-direction:row; flex-wrap:wrap; gap:.2rem 1.3rem; margin-bottom:.8rem}
-    #spaces .rdots button{padding-left:.8rem}
+    #spaces .rctl{grid-column:1/-1; justify-self:start; display:block}
+    #spaces .rdots.wrapped{justify-content:center}
+    #spaces .rdots{flex-direction:row; flex-wrap:wrap; gap:clamp(.45rem,.9vw,1.1rem); margin-bottom:.8rem}
+    #spaces .rdots button{padding-left:clamp(.5rem,.7vw,.8rem); font-size:clamp(.66rem,.74vw,.74rem); letter-spacing:clamp(.14em,.18vw,.24em); white-space:nowrap}
     #spaces .room h3{font-size:clamp(2.2rem,min(6vw,8.5vh),4.6rem)}
     #spaces .rctl>button{display:none}
     #spaces .rdots{margin-bottom:0}
@@ -1106,7 +1108,12 @@ main>section#menu[id]{overflow:hidden}
 (function(){
   var sec=document.getElementById('spaces'); if(!sec) return;
   var head=sec.querySelector('.head'), ctl=sec.querySelector('.rctl');
+  var rd=document.getElementById('rdots');
+  function wrapCheck(){ if(!rd) return; rd.classList.remove('wrapped');
+    var ph=sec.querySelector('.room.on .art')||sec.querySelector('.room .art');
+    if(innerWidth>=901&&innerHeight<=820&&ph){ rd.style.maxWidth=''; var room=Math.max(240,ph.getBoundingClientRect().left-rd.getBoundingClientRect().left-24); rd.style.maxWidth=room+'px'; } else rd.style.maxWidth=''; var b=rd.children; if(b.length&&b[b.length-1].offsetTop>b[0].offsetTop+2) rd.classList.add('wrapped'); }
   function fit(){
+    wrapCheck();
     if(!head||!ctl||innerWidth<901) return;
     var s=sec.getBoundingClientRect(), h=head.getBoundingClientRect(), c=ctl.getBoundingClientRect();
     if(!s.height) return;
