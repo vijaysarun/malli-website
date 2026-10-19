@@ -1080,4 +1080,42 @@ main>section#menu[id]{overflow:hidden}
 <script>
 (function(){ var d=document.getElementById('dishes'); if(!d||!window.MutationObserver) return; new MutationObserver(function(){ d.scrollTop=0; }).observe(d,{childList:true}); })();
 </script>
+<style>
+/* spaces: keep each room's text in the gap between the heading and the room list */
+@media(min-width:901px){
+  #spaces .room{grid-template-rows:var(--sp-top,14rem) 1fr auto auto auto 1fr var(--sp-bot,14rem)}
+  #spaces .room .meta{grid-row:3}
+  #spaces .room h3{grid-row:4; font-size:clamp(2.4rem,min(6vw,9.5vh),5.4rem)}
+  #spaces .room p{grid-row:5; margin-top:min(1.1rem,1.6vh); line-height:1.6}
+  #spaces .room .meta{margin-bottom:min(.9rem,1.4vh)}
+  @media(max-height:820px){
+    #spaces .rdots{flex-direction:row; flex-wrap:wrap; gap:.2rem 1.3rem; margin-bottom:.8rem}
+    #spaces .rdots button{padding-left:.8rem}
+    #spaces .room h3{font-size:clamp(2.2rem,min(6vw,8.5vh),4.6rem)}
+    #spaces .rctl>button{display:none}
+    #spaces .rdots{margin-bottom:0}
+  }
+  @media(max-height:680px){
+    #spaces .head{gap:.5rem}
+    #spaces .head h2{font-size:clamp(1.5rem,4.6vh,2.2rem)}
+    #spaces .room p{font-size:.84rem}
+  }
+}
+</style>
+<script>
+(function(){
+  var sec=document.getElementById('spaces'); if(!sec) return;
+  var head=sec.querySelector('.head'), ctl=sec.querySelector('.rctl');
+  function fit(){
+    if(!head||!ctl||innerWidth<901) return;
+    var s=sec.getBoundingClientRect(), h=head.getBoundingClientRect(), c=ctl.getBoundingClientRect();
+    if(!s.height) return;
+    sec.style.setProperty('--sp-top',Math.max(0,h.bottom-s.top-parseFloat(getComputedStyle(sec).paddingTop))+16+'px');
+    sec.style.setProperty('--sp-bot',Math.max(0,s.bottom-parseFloat(getComputedStyle(sec).paddingBottom)-c.top)+16+'px');
+  }
+  fit(); addEventListener('resize',fit); addEventListener('load',fit);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  if(window.MutationObserver) new MutationObserver(fit).observe(sec,{attributes:true,attributeFilter:['class']});
+})();
+</script>
 </body></html>
