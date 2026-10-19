@@ -43,6 +43,9 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 - **Initial design** – built as a Claude artifact under a separate account.
 - **Moved to this account** – the self-contained `index.html` was republished as a new Claude artifact.
 - **New homepage background** – the hero photo was replaced with a full-resolution photo of Malli's Tulip dining room (chandeliers, wall relief and the Malli sign).
+- **Moodier homepage** – the Tulip photo was darkened and warmed (lower brightness, more contrast, a touch of sepia) for a low-lit, candlelit feel.
+- **Photo in the white palette** – the white palette used to hide the homepage photo; it now shows it faintly, like a faded print behind the logo.
+- **Spaces layout fix** – on shorter laptop screens the room description overlapped the list of room names. The text now always sits between the heading and the list; on screens under about 820px tall the room names run in a row and the arrow buttons are hidden (names stay clickable and rooms still rotate automatically).
 
 ## Known to-dos
 
