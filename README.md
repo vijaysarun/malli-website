@@ -27,7 +27,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
    - **Gardenia** – events and wine tasting
    - **Dahlia** – the bistro
 5. **Menu** – tabs for Small plates, Mains, Dessert and Cocktails, each with a short chapter intro. This is a sample menu; final dishes and prices are confirmed before opening.
-6. **Events** – two matching panels. *Events we host*: a featured event card (An Evening of Wine & Spice in Gardenia, coming soon) over a black-and-white photo of lamb karahi, with a Reserve a spot button; a See past events link sits beside the heading. *Host your own*: private events in Magnolia (up to 12 guests) or Gardenia (up to 36), with plated multi-course (5 or 7 courses) or buffet menus, a one-week booking notice, and Email operations / Call buttons.
+6. **Events** – a *We host | You host* switch on the left that alternates every 7 seconds (pauses while the pointer is over the page; click either to choose), with one matching panel on the right. *We host*: a featured event card (An Evening of Wine & Spice in Gardenia, coming soon) over a black-and-white photo of lamb karahi, with Reserve a spot and See past events links. *You host*: private events in Magnolia (up to 12 guests) or Gardenia (up to 36), plated multi-course (5 or 7 courses) or buffet menus, a one-week booking notice, and Email operations / Call buttons.
 7. **Gallery** – five tiles shaped like the wall relief, cycling through room and dish photos (dahi vada, stuffed kebabs, lamb karahi, seekh kebabs, pani puri, grilled fish). Click any tile to open a full-screen lightbox.
 8. **Contact** – opening details, address, a stylised map with "Get directions" and "View on Google Maps" links, and a **Join the waitlist** button.
 
@@ -46,6 +46,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 - **Moodier homepage** – the Tulip photo was darkened and warmed (lower brightness, more contrast, a touch of sepia) for a low-lit, candlelit feel.
 - **Photo in the white palette** – the white palette used to hide the homepage photo; it now shows it faintly, like a faded print behind the logo.
 - **New Events page** – redesigned as two equal-height panels (events we host / host your own) that follow all four palettes.
+- **Events switcher** – the two Events panels became a *We host | You host* switch with one panel at a time, alternating automatically.
 - **Spaces layout fix** – on shorter laptop screens the room description overlapped the list of room names. The text now always sits between the heading and the list; on screens under about 820px tall the room names run in a row and the arrow buttons are hidden (names stay clickable and rooms still rotate automatically).
 
 ## Known to-dos
