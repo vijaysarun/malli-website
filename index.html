@@ -525,41 +525,40 @@ html{background:#0d1118; color-scheme:dark}
 </section>
 
 <section id="events">
-  <div class="evx">
-    <div class="evx-side">
-      <div class="evx-head"><p class="eyebrow">Events at Malli</p><h2>Occasions, <em>hosted properly.</em></h2></div>
-      <div class="evx-tabs" role="tablist" aria-label="Event type">
-        <button type="button" role="tab" id="evt-we" aria-controls="evp-we" aria-selected="true">We host</button>
-        <span class="evx-sep" aria-hidden="true"></span>
-        <button type="button" role="tab" id="evt-you" aria-controls="evp-you" aria-selected="false">You host</button>
-        <i class="evx-bar" aria-hidden="true"><b></b></i>
+  <div class="evy">
+    <div class="evy-head"><p class="eyebrow">Events at Malli</p><h2>Occasions, <em>hosted properly.</em></h2></div>
+    <div class="evy-body">
+      <div class="evy-tabs" role="tablist" aria-label="Event type" aria-orientation="vertical">
+        <button type="button" role="tab" id="evt-we" aria-controls="evp-we" aria-selected="true"><b>We host</b><small>Tastings and evenings by Malli</small><i aria-hidden="true"><s></s></i></button>
+        <button type="button" role="tab" id="evt-you" aria-controls="evp-you" aria-selected="false"><b>You host</b><small>Private events, your way</small><i aria-hidden="true"><s></s></i></button>
       </div>
-      <div class="evx-copy">
-        <div class="evx-c on" data-k="we"><span class="evx-num">01 &middot; Join us</span><h3>Events we host</h3><p>Tastings, chef&rsquo;s tables and seasonal evenings, planned by our kitchen and hosted in Gardenia.</p><a class="evx-past" href="#gallery">See past events <span aria-hidden="true">&rarr;</span></a></div>
-        <div class="evx-c" data-k="you"><span class="evx-num">02 &middot; Host your own</span><h3>Private events &amp; custom menus</h3><p>Your occasion, your guest list, and a menu our chef builds around you, in Magnolia or Gardenia.</p></div>
-      </div>
-    </div>
-    <div class="evx-stage">
-      <article class="evx-p evx-card on" id="evp-we" role="tabpanel" aria-labelledby="evt-we" aria-label="Lamb karahi, in black and white">
-        <div class="evx-cin">
-          <span class="evx-tag">Gardenia &middot; Coming soon</span>
-          <h4>An Evening of Wine &amp; Spice</h4>
-          <p>Six wines, small plates, one evening.</p>
-          <a class="evx-spot" href="mailto:operations@mallinc.us?subject=Reserve%20a%20spot%3A%20An%20Evening%20of%20Wine%20%26%20Spice">Reserve a spot <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </article>
-      <div class="evx-p evx-panel" id="evp-you" role="tabpanel" aria-labelledby="evt-you" aria-hidden="true">
-        <p class="evx-lead">Book Magnolia or Gardenia for your occasion, with a plated multi-course menu or a buffet our chef builds around you.</p>
-        <div class="evx-opts">
-          <div class="evx-opt"><b>Multi-course</b><small>Plated &middot; 5 or 7 courses</small></div>
-          <div class="evx-opt"><b>Buffet</b><small>Custom spread</small></div>
-        </div>
-        <p class="evx-cap"><span>Magnolia &middot; up to 12 guests</span><i aria-hidden="true"></i><span>Gardenia &middot; up to 36 guests</span></p>
-        <p class="evx-note">Please book at least <b>one week in advance</b> so our chef can plan your menu.</p>
-        <div class="evx-btns">
-          <a class="evx-b solid" href="mailto:operations@mallinc.us?subject=Private%20event%20enquiry">Email operations</a>
-          <a class="evx-b line" href="tel:+19196500060">Call (919) 650-0060</a>
-        </div>
+      <div class="evy-stage">
+        <article class="evy-p on" id="evp-we" role="tabpanel" aria-labelledby="evt-we">
+          <div class="evy-img evy-bw" role="img" aria-label="Lamb karahi, in black and white"></div>
+          <div class="evy-txt">
+            <span class="evy-eb">Gardenia &middot; Coming soon</span>
+            <h3>An Evening of Wine &amp; Spice.</h3>
+            <p>Six wines, small plates, one evening. Our kitchen pairs each pour with a dish from the menu, served in Gardenia on the mezzanine.</p>
+            <p class="evy-note">Seats are limited. Reserve early to hold your place.</p>
+            <div class="evy-btns">
+              <a class="evy-b solid" href="mailto:operations@mallinc.us?subject=Reserve%20a%20spot%3A%20An%20Evening%20of%20Wine%20%26%20Spice">Reserve a spot</a>
+              <a class="evy-b line" href="#gallery">See past events</a>
+            </div>
+          </div>
+        </article>
+        <article class="evy-p" id="evp-you" role="tabpanel" aria-labelledby="evt-you" aria-hidden="true">
+          <div class="evy-img evy-pdr" role="img" aria-label="Magnolia, the private dining room at Malli"></div>
+          <div class="evy-txt">
+            <span class="evy-eb">Private events</span>
+            <h3>Let Malli host your next occasion.</h3>
+            <p>From intimate dinners to full celebrations, we offer 3, 5 or 7 course menus, served in our private dining room (PDR) for up to 12 or in Gardenia on the mezzanine for up to 36. Gardenia can also host a buffet, and you can book the entire restaurant.</p>
+            <p class="evy-note">Please reach out at least one week in advance.</p>
+            <div class="evy-btns">
+              <a class="evy-b solid" href="mailto:operations@mallinc.us?subject=Private%20event%20enquiry">Email operations</a>
+              <a class="evy-b line" href="tel:+19196500060">Call (919) 650-0060</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </div>
@@ -1146,103 +1145,85 @@ main>section#menu[id]{overflow:hidden}
 })();
 </script>
 <style>
-/* events v3: "We host | You host" switch on the left, one matching panel on the right */
-#events .evx{margin-block:auto}
-.evx{display:grid; grid-template-columns:minmax(300px,34%) minmax(0,1fr); column-gap:clamp(2.5rem,6vw,6rem); align-items:center; width:100%; max-width:1240px; margin-inline:auto}
-.evx-side{display:flex; flex-direction:column; gap:clamp(1.6rem,4.5vh,2.8rem); min-width:0}
-#events .evx-head{display:flex; flex-direction:column; gap:1rem}
-#events .evx-head h2{font-size:clamp(2.1rem,min(3.8vw,6vh),3.4rem); line-height:1.08}
-.evx-tabs{position:relative; display:flex; align-items:center; gap:1.4rem; padding-bottom:.9rem; align-self:flex-start}
-.evx-tabs button{background:none; border:0; padding:0; cursor:pointer; font:400 clamp(1.25rem,1.9vw,1.6rem)/1 var(--serif); color:var(--fg-faint); transition:color .4s}
-.evx-tabs button[aria-selected="true"]{color:var(--gold-soft); font-style:italic}
-.evx-tabs button:hover{color:var(--fg)}
-.evx-sep{width:1px; height:1.3rem; background:var(--line)}
-.evx-bar{position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--line)}
-.evx-bar b{position:absolute; left:0; top:-.5px; height:2px; width:0; background:var(--gold)}
-.evx-copy{display:grid; min-height:9rem}
-.evx-c{grid-area:1/1; display:flex; flex-direction:column; align-items:flex-start; gap:.75rem; opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .6s ease, transform .6s ease, visibility 0s .6s}
-.evx-c.on{opacity:1; visibility:visible; transform:none; transition:opacity .6s ease .15s, transform .6s ease .15s, visibility 0s}
-.evx-num{font:400 .66rem var(--sans); letter-spacing:.3em; text-transform:uppercase; color:var(--gold)}
-.evx-c h3{font:400 clamp(1.45rem,2.2vw,1.95rem)/1.15 var(--serif); color:var(--fg)}
-.evx-c p{font-size:.88rem; line-height:1.75; color:var(--fg-dim); max-width:26rem}
-.evx-past{margin-top:.3rem; font:400 .64rem var(--sans); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-soft); border-bottom:1px solid transparent; transition:border-color .25s}
-.evx-past:hover{border-color:var(--gold)}
-.evx-stage{display:grid; min-height:clamp(340px,calc(100vh - 19rem),540px)}
-.evx-p{grid-area:1/1; border-radius:16px; opacity:0; visibility:hidden; transform:scale(.985); transition:opacity .7s ease, transform .9s cubic-bezier(.2,.7,.2,1), visibility 0s .7s}
-.evx-p.on{opacity:1; visibility:visible; transform:none; transition:opacity .7s ease, transform .9s cubic-bezier(.2,.7,.2,1), visibility 0s}
-.evx-card{position:relative; overflow:hidden; background:#0b0b0b; box-shadow:0 30px 60px -28px rgba(0,0,0,.65)}
-.evx-card::before{content:""; position:absolute; inset:0; background:var(--img-karahi) 30% 40%/cover no-repeat; filter:grayscale(1) contrast(1.12) brightness(.92); transform:scale(1.02); transition:transform 1.4s ease}
-.evx-card:hover::before,.evx-card.on::before{transform:scale(1.05)}
-.evx-card::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.4) 60%,rgba(0,0,0,.86) 100%)}
-.evx-cin{position:absolute; z-index:1; left:0; right:0; bottom:0; padding:clamp(1.6rem,3vw,2.8rem); display:flex; flex-direction:column; align-items:flex-start; gap:.65rem; color:#f6ecdc}
-.evx-tag{font:400 .62rem var(--sans); letter-spacing:.28em; text-transform:uppercase; color:#e9cf98}
-.evx-cin h4{margin:0; font:400 clamp(1.7rem,2.8vw,2.5rem)/1.12 var(--serif); color:#fbf3e6}
-.evx-cin p{font-size:.9rem; color:rgba(246,236,220,.88)}
-.evx-spot{margin-top:1rem; display:inline-flex; gap:.5rem; align-items:center; padding:.9rem 1.6rem; border-radius:999px; background:linear-gradient(135deg,#f0d49a,#d9b06a); color:#5a1626; font:500 .66rem var(--sans); letter-spacing:.24em; text-transform:uppercase; transition:transform .25s, filter .25s}
-.evx-spot:hover{transform:translateY(-2px); filter:brightness(1.05)}
-.evx-panel{display:flex; flex-direction:column; justify-content:center; gap:clamp(1.1rem,2.8vh,1.7rem); padding:clamp(1.8rem,3.4vw,3rem); border:1px solid var(--line); background:color-mix(in srgb,var(--fg) 4%,transparent)}
-.evx-lead{font-size:.95rem; line-height:1.8; color:var(--fg-dim); max-width:36rem}
-.evx-opts{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem}
-.evx-opt{display:flex; flex-direction:column; align-items:center; gap:.6rem; text-align:center; padding:clamp(1.1rem,2.8vh,1.7rem) 1rem; border:1px solid var(--line); border-radius:10px; transition:border-color .3s, background .3s}
-.evx-opt:hover{border-color:var(--gold); background:color-mix(in srgb,var(--gold) 6%,transparent)}
-.evx-opt b{font:400 clamp(1.4rem,2vw,1.8rem)/1.1 var(--serif); color:var(--gold-soft)}
-.evx-opt small{font:400 .6rem var(--sans); letter-spacing:.24em; text-transform:uppercase; color:var(--fg-dim)}
-.evx-cap{display:flex; flex-wrap:wrap; align-items:center; gap:.4rem 1rem; font-size:.82rem; color:var(--fg-dim)}
-.evx-cap i{width:1px; height:1em; background:var(--fg-faint)}
-.evx-note{padding:1rem 1.2rem; border-left:2px solid var(--gold); background:color-mix(in srgb,var(--gold) 10%,transparent); font-size:.82rem; line-height:1.55; color:var(--fg)}
-.evx-note b{font-weight:500; color:var(--gold-soft)}
-.evx-btns{display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:.4rem}
-.evx-b{display:flex; align-items:center; justify-content:center; text-align:center; padding:1rem 1.1rem; border-radius:999px; font:500 .66rem var(--sans); letter-spacing:.22em; text-transform:uppercase; transition:transform .25s, background .25s, color .25s}
-.evx-b.solid{background:linear-gradient(135deg,var(--btn-a),var(--btn-b)); color:var(--btn-fg)}
-.evx-b.line{border:1px solid var(--gold-soft); color:var(--gold-soft)}
-.evx-b:hover{transform:translateY(-2px)}
-.evx-b.line:hover{background:var(--gold-soft); color:var(--night)}
-:root[data-p="white"] .evx-panel{background:#fff}
-:root[data-p="white"] .evx-card{box-shadow:0 24px 48px -26px rgba(90,22,38,.45)}
+/* events v4: heading on top, vertical We host / You host tabs on the left, image + details on the right */
+#events .evy{margin-block:auto; width:100%; max-width:1280px; margin-inline:auto; display:flex; flex-direction:column; gap:clamp(1.4rem,5vh,3.4rem)}
+#events .evy-head{display:flex; flex-direction:column; gap:.9rem}
+#events .evy-head h2{font-size:clamp(2.1rem,min(4vw,6.4vh),3.5rem); line-height:1.05}
+.evy-body{display:grid; grid-template-columns:minmax(220px,26%) minmax(0,1fr); column-gap:clamp(2rem,4vw,4rem); align-items:stretch}
+.evy-tabs{display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:clamp(1.6rem,4vh,2.6rem); padding-bottom:clamp(2rem,10vh,6rem)}
+.evy-tabs button{position:relative; display:flex; flex-direction:column; align-items:center; gap:.45rem; background:none; border:0; cursor:pointer; padding:.2rem 1.2rem 1rem; color:var(--fg-faint); transition:color .4s}
+.evy-tabs b{font:400 clamp(1.5rem,2.1vw,1.95rem)/1.1 var(--serif); letter-spacing:.02em; transition:color .4s}
+.evy-tabs small{font:300 .76rem var(--sans); letter-spacing:.02em; color:var(--fg-faint); transition:color .4s}
+.evy-tabs button:hover b{color:var(--fg-dim)}
+.evy-tabs button[aria-selected="true"] b{color:var(--gold-soft)}
+.evy-tabs button[aria-selected="true"] small{color:var(--fg-dim)}
+.evy-tabs i{position:absolute; left:50%; bottom:0; width:12.5rem; max-width:100%; height:1px; transform:translateX(-50%); background:transparent; transition:background .4s}
+.evy-tabs button[aria-selected="true"] i{background:color-mix(in srgb,var(--gold-soft) 25%,transparent)}
+.evy-tabs i s{position:absolute; left:0; top:-.5px; height:2px; width:0; background:var(--gold-soft)}
+.evy-stage{display:grid; min-width:0}
+.evy-p{grid-area:1/1; display:flex; flex-direction:column; gap:clamp(1.1rem,3.2vh,2.2rem); opacity:0; visibility:hidden; transform:translateY(10px); transition:opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1), visibility 0s .7s}
+.evy-p.on{opacity:1; visibility:visible; transform:none; transition:opacity .7s ease .1s, transform .8s cubic-bezier(.2,.7,.2,1) .1s, visibility 0s}
+.evy-img{position:relative; overflow:hidden; border-radius:12px; height:clamp(130px,calc(100vh - 39rem),330px); background:#111; box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}
+.evy-img::before{content:""; position:absolute; inset:0; background-repeat:no-repeat; background-size:cover; transform:scale(1.03); transition:transform 6s ease-out}
+.evy-p.on .evy-img::before{transform:scale(1.08)}
+.evy-bw::before{background-image:var(--img-karahi); background-position:28% 42%; filter:grayscale(1) contrast(1.12) brightness(.92)}
+.evy-pdr::before{background-image:var(--img-magnolia); background-position:center 18%}
+.evy-txt{display:flex; flex-direction:column; align-items:flex-start; gap:clamp(.7rem,1.8vh,1.1rem); max-width:38rem}
+.evy-eb{font:400 .68rem var(--sans); letter-spacing:.3em; text-transform:uppercase; color:var(--gold)}
+.evy-txt h3{font:400 clamp(1.6rem,min(2.6vw,4.4vh),2.3rem)/1.15 var(--serif); color:var(--fg)}
+.evy-txt p{font-size:clamp(.86rem,1.05vw,.95rem); line-height:1.8; color:var(--fg-dim)}
+.evy-txt .evy-note{color:var(--fg); margin-top:.2rem}
+.evy-btns{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:.5rem}
+.evy-b{display:inline-flex; align-items:center; justify-content:center; padding:.95rem 1.7rem; border-radius:999px; font:500 .66rem var(--sans); letter-spacing:.22em; text-transform:uppercase; white-space:nowrap; transition:transform .25s, background .25s, color .25s}
+.evy-b.solid{background:linear-gradient(135deg,var(--btn-a),var(--btn-b)); color:var(--btn-fg)}
+.evy-b.line{border:1px solid var(--gold-soft); color:var(--gold-soft)}
+.evy-b:hover{transform:translateY(-2px)}
+.evy-b.line:hover{background:var(--gold-soft); color:var(--night)}
+@media(min-width:861px) and (max-height:940px){
+  .evy-img{height:clamp(130px,calc(100vh - 36.5rem),330px)}
+  #events .evy{gap:clamp(1.2rem,3.4vh,2.2rem)}
+  .evy-p{gap:clamp(1rem,2.4vh,1.5rem)}
+  .evy-txt{gap:.65rem}
+  .evy-txt p{line-height:1.65}
+}
 @media(min-width:861px) and (max-height:760px){
-  .evx-side{gap:1.3rem}
-  .evx-panel{gap:.9rem; padding:1.5rem 2rem}
-  .evx-opt{padding:.85rem .8rem; gap:.4rem}
-  .evx-note{padding:.7rem 1rem}
-  .evx-b{padding:.85rem 1rem}
-  .evx-lead{font-size:.88rem; line-height:1.6}
+  .evy-txt p{line-height:1.55}
+  .evy-b{padding:.8rem 1.4rem}
+  .evy-tabs{padding-bottom:1.5rem}
 }
 @media(max-width:860px){
-  .evx{grid-template-columns:minmax(0,1fr); row-gap:1.6rem}
-  .evx-side{gap:1.3rem; align-items:center; text-align:center}
-  #events .evx-head{align-items:center}
-  .evx-tabs{align-self:center}
-  .evx-c{align-items:center} .evx-c p{margin-inline:auto}
-  .evx-copy{min-height:0}
-  .evx-stage{min-height:0}
-  .evx-card{min-height:340px}
+  #events .evy{gap:1.4rem}
+  #events .evy-head{align-items:center; text-align:center}
+  .evy-body{grid-template-columns:minmax(0,1fr); row-gap:1.4rem}
+  .evy-tabs{flex-direction:row; justify-content:center; align-items:flex-start; gap:.4rem; padding:0}
+  .evy-tabs button{padding:.2rem .8rem .8rem}
+  .evy-tabs b{font-size:1.4rem} .evy-tabs small{font-size:.66rem}
+  .evy-tabs i{width:100%}
+  .evy-img{height:200px}
 }
-@media(max-width:520px){ .evx-btns{grid-template-columns:1fr} .evx-opt b{font-size:1.3rem} .evx-panel{padding:1.4rem} }
-@media(prefers-reduced-motion:reduce){ .evx-c,.evx-p{transition:none} }
+@media(prefers-reduced-motion:reduce){ .evy-p,.evy-img::before{transition:none} }
 </style>
 <script>
 (function(){
   try{
     var sec=document.getElementById('events'); if(!sec) return;
-    var tabs=[document.getElementById('evt-we'),document.getElementById('evt-you')], keys=['we','you'];
+    var tabs=[document.getElementById('evt-we'),document.getElementById('evt-you')];
     var panels=[document.getElementById('evp-we'),document.getElementById('evp-you')];
-    var copies=[].slice.call(sec.querySelectorAll('.evx-c')), bar=sec.querySelector('.evx-bar b');
-    var cur=0, hold=false, start=0, DUR=7000, still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var bars=tabs.map(function(b){ return b.querySelector('i s'); });
+    var cur=0, hold=false, start=0, pausedAt=0, DUR=7000, still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
     function show(i){ cur=i;
-      tabs.forEach(function(b,k){ b.setAttribute('aria-selected',k===i); b.tabIndex=k===i?0:-1; });
+      tabs.forEach(function(b,k){ b.setAttribute('aria-selected',k===i); b.tabIndex=k===i?0:-1; bars[k].style.width=k===i&&still?'100%':'0'; });
       panels.forEach(function(p,k){ p.classList.toggle('on',k===i); p.setAttribute('aria-hidden',k===i?'false':'true'); });
-      copies.forEach(function(c){ c.classList.toggle('on',c.dataset.k===keys[i]); });
-      start=performance.now(); }
-    function place(){ var b=tabs[cur], r=b.getBoundingClientRect(), o=b.parentNode.getBoundingClientRect(); bar.style.left=(r.left-o.left)+'px'; return r.width; }
+      start=performance.now(); pausedAt=0; }
     tabs.forEach(function(b,k){ b.addEventListener('click',function(){ show(k); });
-      b.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ e.preventDefault(); e.stopPropagation(); show(1-cur); tabs[cur].focus(); } }); });
-    sec.addEventListener('pointerenter',function(){ hold=true; }); sec.addEventListener('pointerleave',function(){ hold=false; start=performance.now()-(start?Math.min(performance.now()-start,DUR*.5):0); });
-    var pausedAt=0;
+      b.addEventListener('keydown',function(e){ if(/Arrow(Up|Down|Left|Right)/.test(e.key)){ e.preventDefault(); e.stopPropagation(); show(1-cur); tabs[cur].focus(); } }); });
+    sec.addEventListener('pointerenter',function(){ hold=true; }); sec.addEventListener('pointerleave',function(){ hold=false; });
     function tick(now){
-      var w=place(), on=sec.classList.contains('on')&&!document.hidden;
-      if(still){ bar.style.width=w+'px'; }
-      else if(!on||hold){ if(!pausedAt) pausedAt=now; }
-      else { if(pausedAt){ start+=now-pausedAt; pausedAt=0; } var f=Math.min(1,(now-start)/DUR); bar.style.width=(w*f)+'px'; if(f>=1) show(1-cur); }
+      if(!still){
+        var on=sec.classList.contains('on')&&!document.hidden;
+        if(!on||hold){ if(!pausedAt) pausedAt=now; }
+        else { if(pausedAt){ start+=now-pausedAt; pausedAt=0; } var f=Math.min(1,(now-start)/DUR); bars[cur].style.width=(f*100)+'%'; if(f>=1) show(1-cur); }
+      }
       requestAnimationFrame(tick);
     }
     show(0); requestAnimationFrame(tick);
