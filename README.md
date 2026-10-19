@@ -27,7 +27,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
    - **Gardenia** – events and wine tasting
    - **Dahlia** – the bistro
 5. **Menu** – tabs for Small plates, Mains, Dessert and Cocktails, each with a short chapter intro. This is a sample menu; final dishes and prices are confirmed before opening.
-6. **Events** – private dining, weddings and sangeet dinners, corporate dinners, chef's table and wine tastings, with contact details for planning (operations@mallinc.us, (919) 650-0060).
+6. **Events** – two matching panels. *Events we host*: a featured event card (An Evening of Wine & Spice in Gardenia, coming soon) with a Reserve a spot button and a See past events link. *Host your own*: private events in Magnolia (up to 12 guests) or Gardenia (up to 36), with plated multi-course (5 or 7 courses) or buffet menus, a one-week booking notice, and Email operations / Call buttons.
 7. **Gallery** – five tiles shaped like the wall relief, cycling through room and dish photos (dahi vada, stuffed kebabs, lamb karahi, seekh kebabs, pani puri, grilled fish). Click any tile to open a full-screen lightbox.
 8. **Contact** – opening details, address, a stylised map with "Get directions" and "View on Google Maps" links, and a **Join the waitlist** button.
 
@@ -45,6 +45,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 - **New homepage background** – the hero photo was replaced with a full-resolution photo of Malli's Tulip dining room (chandeliers, wall relief and the Malli sign).
 - **Moodier homepage** – the Tulip photo was darkened and warmed (lower brightness, more contrast, a touch of sepia) for a low-lit, candlelit feel.
 - **Photo in the white palette** – the white palette used to hide the homepage photo; it now shows it faintly, like a faded print behind the logo.
+- **New Events page** – redesigned as two equal-height panels (events we host / host your own) that follow all four palettes.
 - **Spaces layout fix** – on shorter laptop screens the room description overlapped the list of room names. The text now always sits between the heading and the list; on screens under about 820px tall the room names run in a row and the arrow buttons are hidden (names stay clickable and rooms still rotate automatically).
 
 ## Known to-dos
