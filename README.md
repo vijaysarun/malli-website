@@ -20,7 +20,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 1. **Home** – the Malli mark, wordmark and "Wine, dine, gather" tagline over a photo of the Tulip dining room, with animated silk waves and a drifting colour mesh that respond to the pointer.
 2. **The Malli promise** – a short statement: every dish has a story, every cocktail a personality, every visit a memory.
 3. **Our story** – why the restaurant is called Malli, its three pillars (Authentic Flavors, Elevated Experience, People at the Heart) and a photo of Tulip.
-4. **Spaces** – an auto-rotating showcase of the five rooms, each with a photo cut to the petal shape of the ceiling:
+4. **Spaces** – an auto-rotating showcase of the five rooms, each with a photo cut to the petal shape of the ceiling. The room names run in a row just under the heading (click one to jump to it), with the selected room's details below:
    - **Tulip** – the dining room
    - **Jasmine** – the bar
    - **Magnolia** – the private room
@@ -47,6 +47,8 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 - **Photo in the white palette** – the white palette used to hide the homepage photo; it now shows it faintly, like a faded print behind the logo.
 - **New Events page** – redesigned as two equal-height panels (events we host / host your own) that follow all four palettes.
 - **Events switcher** – the two Events panels became a *We host | You host* switch with one panel at a time, alternating automatically.
+- **Spaces room names moved up** – the row of room names now sits just under the *Five rooms* heading, with the selected room's details below it.
+- **New Events layout** – heading on top, stacked *We host / You host* tabs on the left, and a photo-and-details panel on the right (matches the latest mockup).
 - **Spaces layout fix** – on shorter laptop screens the room description overlapped the list of room names. The text now always sits between the heading and the list; on screens under about 820px tall the room names run in a row and the arrow buttons are hidden (names stay clickable and rooms still rotate automatically).
 
 ## Known to-dos

@@ -1130,14 +1130,14 @@ main>section#menu[id]{overflow:hidden}
   var rd=document.getElementById('rdots');
   function wrapCheck(){ if(!rd) return; rd.classList.remove('wrapped');
     var ph=sec.querySelector('.room.on .art')||sec.querySelector('.room .art');
-    if(innerWidth>=901&&innerHeight<=820&&ph){ rd.style.maxWidth=''; var room=Math.max(240,ph.getBoundingClientRect().left-rd.getBoundingClientRect().left-24); rd.style.maxWidth=room+'px'; } else rd.style.maxWidth=''; var b=rd.children; if(b.length&&b[b.length-1].offsetTop>b[0].offsetTop+2) rd.classList.add('wrapped'); }
+    if(innerWidth>=901&&ph){ rd.style.maxWidth=''; var room=Math.max(240,ph.getBoundingClientRect().left-rd.getBoundingClientRect().left-24); rd.style.maxWidth=room+'px'; } else rd.style.maxWidth=''; var b=rd.children; if(b.length&&b[b.length-1].offsetTop>b[0].offsetTop+2) rd.classList.add('wrapped'); }
   function fit(){
     wrapCheck();
     if(!head||!ctl||innerWidth<901) return;
     var s=sec.getBoundingClientRect(), h=head.getBoundingClientRect(), c=ctl.getBoundingClientRect();
     if(!s.height) return;
-    sec.style.setProperty('--sp-top',Math.max(0,h.bottom-s.top-parseFloat(getComputedStyle(sec).paddingTop))+16+'px');
-    sec.style.setProperty('--sp-bot',Math.max(0,s.bottom-parseFloat(getComputedStyle(sec).paddingBottom)-c.top)+16+'px');
+    sec.style.setProperty('--sp-top',Math.max(0,c.bottom-s.top-parseFloat(getComputedStyle(sec).paddingTop))+24+'px');
+    sec.style.setProperty('--sp-bot','24px');
   }
   fit(); addEventListener('resize',fit); addEventListener('load',fit);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
@@ -1230,4 +1230,15 @@ main>section#menu[id]{overflow:hidden}
   }catch(e){}
 })();
 </script>
+<style>
+/* spaces: room names sit just under the heading; the selected room's details fill the space below */
+@media(min-width:901px){
+  #spaces .rctl{grid-column:1/-1; grid-row:2; align-self:start; justify-self:start; display:block; padding-top:clamp(1.2rem,3.5vh,2.2rem)}
+  #spaces .rctl>button{display:none}
+  #spaces .rdots{flex-direction:row; flex-wrap:wrap; gap:clamp(.45rem,.9vw,1.1rem); margin-bottom:0}
+  #spaces .rdots button{padding-left:clamp(.5rem,.7vw,.8rem); font-size:clamp(.66rem,.74vw,.74rem); letter-spacing:clamp(.14em,.18vw,.24em); white-space:nowrap}
+  #spaces .room{grid-template-rows:var(--sp-top,16rem) 1fr auto auto auto 1.4fr var(--sp-bot,24px)}
+  #spaces .room h3{font-size:clamp(2.4rem,min(6vw,10vh),5.2rem)}
+}
+</style>
 </body></html>
