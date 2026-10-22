@@ -43,7 +43,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 
 ## Change history
 
-- **Speed, accessibility and search** – photos moved out of the page into compressed image files (page down from 2.3 MB to about 110 KB, with a smaller homepage photo for phones); American spelling throughout; footer and small labels made larger and brighter; homepage photo lightened; email and Instagram added beside the waitlist button; Magnolia now says *up to 12 guests*; alt text, page title, description, tab icon, share image and Google restaurant details added; palette selector removed (red wine only).
+- **Speed, accessibility and search** – photos moved out of the page into compressed image files (page down from 2.3 MB to about 110 KB, with a smaller homepage photo for phones); American spelling throughout; footer and small labels made larger and brighter; email and Instagram added beside the waitlist button; Magnolia now says *up to 12 guests*; alt text, page title, description, tab icon, share image and Google restaurant details added; palette selector removed (red wine only).
 - **Initial design** – built as a Claude artifact under a separate account.
 - **Moved to this account** – the self-contained `index.html` was republished as a new Claude artifact.
 - **New homepage background** – the hero photo was replaced with a full-resolution photo of Malli's Tulip dining room (chandeliers, wall relief and the Malli sign).

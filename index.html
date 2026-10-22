@@ -129,7 +129,7 @@ section>.art svg{width:100%; height:100%; overflow:visible}
 .hart.l{left:-1%; bottom:-4%}
 .hart.r{right:-1%; bottom:-4%; scale:-1 1}
 .hero-in{z-index:4!important}
-.venue{position:absolute; inset:0; z-index:0; opacity:.7; filter:brightness(.68) contrast(1.1) saturate(.9) sepia(.12); pointer-events:none}
+.venue{position:absolute; inset:0; z-index:0; opacity:.7; filter:brightness(.5) contrast(1.18) saturate(.8) sepia(.18); pointer-events:none}
 .hero::before{content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(180deg,rgba(var(--fade),1) 0%,rgba(var(--fade),.96) 8%,rgba(var(--fade),.8) 16%,rgba(var(--fade),.55) 25%,rgba(var(--fade),.28) 35%,rgba(var(--fade),0) 48%),radial-gradient(ellipse 34% 40% at 50% 52%,rgba(var(--fade),.58) 0%,rgba(var(--fade),.3) 60%,transparent 100%),linear-gradient(0deg,rgba(var(--fade),.32),transparent 35%)}
 .room .art.photo-art{background-size:100% 100%; background-position:center; background-repeat:no-repeat}
 .room .art.photo-art svg{display:none}
@@ -753,7 +753,7 @@ html{background:#0d1118; color-scheme:dark}
     function draw(t){
       var cs=getComputedStyle(document.documentElement), lt=document.documentElement.getAttribute('data-p')==='white', col={o:cs.getPropertyValue('--wave').trim()||'90,22,38', g:rgb(cs.getPropertyValue('--gold'),'201,164,92')};
       // the photo fades between faint and clear in step with the waves
-      if(photo){ var k=.5+.5*Math.sin(t*.00042); photo.style.opacity=(.72+.28*k).toFixed(3); }
+      if(photo){ var k=.5+.5*Math.sin(t*.00042); photo.style.opacity=(.32+.68*k).toFixed(3); }
       x.globalCompositeOperation='source-over'; x.clearRect(0,0,W,H); x.globalCompositeOperation=lt?'source-over':'lighter';
       L.forEach(function(l,i){
         x.beginPath(); x.moveTo(0,H);
@@ -1414,13 +1414,5 @@ img.venue{width:100%; height:100%; object-fit:cover; object-position:center 40%;
 .evy-bw img{object-position:28% 42%; filter:grayscale(1) contrast(1.12) brightness(.92)}
 .evy-pdr img{object-position:center 18%}
 @media(prefers-reduced-motion:reduce){ .room.on .art.photo-art .ph-img{animation:none} }
-</style>
-<style>
-/* hero: let the dining-room photo show through the color layers */
-.hero #mesh{opacity:.4}
-.hero #aur{opacity:.75}
-.hero::before{background:linear-gradient(180deg,rgba(var(--fade),.95) 0%,rgba(var(--fade),.7) 9%,rgba(var(--fade),.3) 20%,rgba(var(--fade),0) 34%),radial-gradient(ellipse 30% 34% at 50% 52%,rgba(var(--fade),.5) 0%,rgba(var(--fade),.2) 60%,transparent 100%),linear-gradient(0deg,rgba(var(--fade),.45),transparent 26%) !important}
-.hero::after{background:radial-gradient(ellipse 110% 100% at 50% 48%,transparent 62%,rgba(var(--vig),.45) 100%) !important}
-.hero{background:linear-gradient(180deg,var(--hero-a),var(--hero-c)) !important}
 </style>
 </body></html>
