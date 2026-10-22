@@ -590,7 +590,8 @@ html{background:#0d1118; color-scheme:dark}
   <div class="mapx">
     <span class="mapx-c tl" aria-hidden="true"></span><span class="mapx-c tr" aria-hidden="true"></span><span class="mapx-c bl" aria-hidden="true"></span><span class="mapx-c br" aria-hidden="true"></span>
     <div class="mapx-win">
-      <iframe title="Map showing Malli at 131 Oakview Commons Drive, Holly Springs, NC" src="https://www.google.com/maps?q=131+Oakview+Commons+Drive+Suite+109,+Holly+Springs,+NC+27540&amp;z=15&amp;hl=en&amp;output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <svg class="mapx-fb" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round"><g stroke-width="1" opacity=".22"><path d="M-20 70L620 110M-20 170L620 150M-20 290L620 330M-20 380L620 360"/><path d="M90-20L130 440M230-20L200 440M390-20L430 440M520-20L490 440"/></g><g stroke-width="2.2" opacity=".45"><path d="M-20 235C150 215 260 255 420 205S560 190 620 200"/><path d="M300-20C285 120 330 260 300 440"/></g><g stroke-width="1" opacity=".16"><circle cx="300" cy="190" r="70"/><circle cx="300" cy="190" r="130"/><circle cx="300" cy="190" r="200"/></g></g><g transform="translate(300 190)"><circle r="16" fill="currentColor" opacity=".15"/><path d="M0 8C-7 0-9-4-9-8a9 9 0 0 1 18 0c0 4-2 8-9 16z" fill="currentColor" transform="translate(0 -6)"/></g></svg>
+      <iframe title="Map showing Malli at 131 Oakview Commons Drive, Holly Springs, NC" data-src="https://www.google.com/maps?q=131+Oakview+Commons+Drive+Suite+109,+Holly+Springs,+NC+27540&amp;z=15&amp;hl=en&amp;output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       <span class="mapx-veil" aria-hidden="true"></span>
     </div>
     <div class="mapx-card">
@@ -1299,4 +1300,22 @@ main>section#menu[id]{overflow:hidden}
 @media(max-width:520px){ .mapx-addr{display:none} .mapx-card{gap:.6rem; padding:.55rem .55rem .55rem .9rem} .mapx-btns a{padding:.6rem .7rem; letter-spacing:.12em} }
 @media(prefers-reduced-motion:reduce){ .mapx-pin{animation:none} #contact .mapx-c{transition:none} }
 </style>
+<style>
+/* contact map fallback: shown when a page blocks the embedded Google map */
+.mapx-fb{position:absolute; inset:0; width:100%; height:100%; color:var(--gold); display:none; background:radial-gradient(ellipse at 50% 45%, rgba(var(--mesh-l),.22), rgba(var(--navsolid),1) 75%)}
+.mapx.fb .mapx-fb{display:block}
+.mapx.fb .mapx-win::after{display:none}
+</style>
+<script>
+(function(){
+  try{
+    var box=document.querySelector('.mapx'), fr=box&&box.querySelector('iframe'); if(!fr) return;
+    function fallback(){ box.classList.add('fb'); if(fr.parentNode) fr.parentNode.removeChild(fr); }
+    document.addEventListener('securitypolicyviolation',function(e){
+      if(/frame|child/.test(e.effectiveDirective||e.violatedDirective||'') && /google/.test(e.blockedURI||'')) fallback();
+    });
+    fr.src=fr.getAttribute('data-src');
+  }catch(e){}
+})();
+</script>
 </body></html>
