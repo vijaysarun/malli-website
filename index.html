@@ -757,7 +757,7 @@ html{background:#0d1118; color-scheme:dark}
     function draw(t){
       var cs=getComputedStyle(document.documentElement), lt=document.documentElement.getAttribute('data-p')==='white', col={o:cs.getPropertyValue('--wave').trim()||'90,22,38', g:rgb(cs.getPropertyValue('--gold'),'201,164,92')};
       // the photo fades between faint and clear in step with the waves
-      if(photo){ var k=.5+.5*Math.sin(t*.00042); photo.style.opacity=(.32+.68*k).toFixed(3); }
+      if(photo){ var k=.5+.5*Math.sin(t*.00042); var vmax=parseFloat(getComputedStyle(photo).getPropertyValue('--vmax'))||1; photo.style.opacity=((.32+.68*k)*vmax).toFixed(3); }
       x.globalCompositeOperation='source-over'; x.clearRect(0,0,W,H); x.globalCompositeOperation=lt?'source-over':'lighter';
       L.forEach(function(l,i){
         x.beginPath(); x.moveTo(0,H);
@@ -1428,7 +1428,7 @@ img.venue{width:100%; height:100%; object-fit:cover; object-position:center 40%;
 @media(max-width:700px){
   main>section[id]:not(.hero){padding-top:8.4rem}
   .nav::before{height:112%; background:linear-gradient(180deg,rgba(var(--navsolid),1) 0%,rgba(var(--navsolid),1) 78%,rgba(var(--navsolid),0) 100%)}
-  .hero .venue{opacity:.66 !important; filter:brightness(.55) contrast(1.14) saturate(.85) sepia(.15)}
+  .hero .venue{--vmax:.8; filter:brightness(.55) contrast(1.14) saturate(.85) sepia(.15)}
   .hero #mesh{opacity:.72}
   .evy-tabs button{padding:.2rem .4rem .8rem}
   .evy-tabs small{white-space:nowrap; font-size:.62rem; letter-spacing:.01em}
