@@ -529,11 +529,11 @@ html{background:#0d1118; color-scheme:dark}
     <div class="evy-head"><p class="eyebrow">Events at Malli</p><h2>Occasions, <em>hosted properly.</em></h2></div>
     <div class="evy-body">
       <div class="evy-tabs" role="tablist" aria-label="Event type" aria-orientation="vertical">
-        <button type="button" role="tab" id="evt-we" aria-controls="evp-we" aria-selected="true"><b>We host</b><small>Tastings and evenings by Malli</small><i aria-hidden="true"><s></s></i></button>
-        <button type="button" role="tab" id="evt-you" aria-controls="evp-you" aria-selected="false"><b>You host</b><small>Private events, your way</small><i aria-hidden="true"><s></s></i></button>
+        <button type="button" role="tab" id="evt-you" aria-controls="evp-you" aria-selected="true"><b>You host</b><small>Private events, your way</small><i aria-hidden="true"><s></s></i></button>
+        <button type="button" role="tab" id="evt-we" aria-controls="evp-we" aria-selected="false"><b>We host</b><small>Tastings and evenings by Malli</small><i aria-hidden="true"><s></s></i></button>
       </div>
       <div class="evy-stage">
-        <article class="evy-p on" id="evp-we" role="tabpanel" aria-labelledby="evt-we">
+        <article class="evy-p" id="evp-we" role="tabpanel" aria-labelledby="evt-we" aria-hidden="true">
           <div class="evy-img evy-bw" role="img" aria-label="Lamb karahi, in black and white"></div>
           <div class="evy-txt">
             <span class="evy-eb">Gardenia &middot; Coming soon</span>
@@ -546,7 +546,7 @@ html{background:#0d1118; color-scheme:dark}
             </div>
           </div>
         </article>
-        <article class="evy-p" id="evp-you" role="tabpanel" aria-labelledby="evt-you" aria-hidden="true">
+        <article class="evy-p on" id="evp-you" role="tabpanel" aria-labelledby="evt-you">
           <div class="evy-img evy-pdr" role="img" aria-label="Magnolia, the private dining room at Malli"></div>
           <div class="evy-txt">
             <span class="evy-eb">Private events</span>
@@ -1150,14 +1150,14 @@ main>section#menu[id]{overflow:hidden}
 #events .evy-head{display:flex; flex-direction:column; gap:.9rem}
 #events .evy-head h2{font-size:clamp(2.1rem,min(4vw,6.4vh),3.5rem); line-height:1.05}
 .evy-body{display:grid; grid-template-columns:minmax(220px,26%) minmax(0,1fr); column-gap:clamp(2rem,4vw,4rem); align-items:stretch}
-.evy-tabs{display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:clamp(1.6rem,4vh,2.6rem); padding-bottom:clamp(2rem,10vh,6rem)}
+.evy-tabs{display:flex; flex-direction:column; justify-content:center; align-items:center; gap:clamp(1.8rem,5vh,3rem); padding:0}
 .evy-tabs button{position:relative; display:flex; flex-direction:column; align-items:center; gap:.45rem; background:none; border:0; cursor:pointer; padding:.2rem 1.2rem 1rem; color:var(--fg-faint); transition:color .4s}
-.evy-tabs b{font:400 clamp(1.5rem,2.1vw,1.95rem)/1.1 var(--serif); letter-spacing:.02em; transition:color .4s}
-.evy-tabs small{font:300 .76rem var(--sans); letter-spacing:.02em; color:var(--fg-faint); transition:color .4s}
-.evy-tabs button:hover b{color:var(--fg-dim)}
+.evy-tabs b{font:400 clamp(2rem,3vw,2.8rem)/1.05 var(--serif); letter-spacing:.01em; color:var(--fg-dim); transition:color .4s}
+.evy-tabs small{font:400 .86rem var(--sans); letter-spacing:.03em; color:var(--fg-dim); transition:color .4s}
+.evy-tabs button:hover b{color:var(--fg)}
 .evy-tabs button[aria-selected="true"] b{color:var(--gold-soft)}
-.evy-tabs button[aria-selected="true"] small{color:var(--fg-dim)}
-.evy-tabs i{position:absolute; left:50%; bottom:0; width:12.5rem; max-width:100%; height:1px; transform:translateX(-50%); background:transparent; transition:background .4s}
+.evy-tabs button[aria-selected="true"] small{color:var(--fg)}
+.evy-tabs i{position:absolute; left:50%; bottom:0; width:15rem; max-width:100%; height:1px; transform:translateX(-50%); background:transparent; transition:background .4s}
 .evy-tabs button[aria-selected="true"] i{background:color-mix(in srgb,var(--gold-soft) 25%,transparent)}
 .evy-tabs i s{position:absolute; left:0; top:-.5px; height:2px; width:0; background:var(--gold-soft)}
 .evy-stage{display:grid; min-width:0}
@@ -1189,7 +1189,6 @@ main>section#menu[id]{overflow:hidden}
 @media(min-width:861px) and (max-height:760px){
   .evy-txt p{line-height:1.55}
   .evy-b{padding:.8rem 1.4rem}
-  .evy-tabs{padding-bottom:1.5rem}
 }
 @media(max-width:860px){
   #events .evy{gap:1.4rem}
@@ -1207,8 +1206,8 @@ main>section#menu[id]{overflow:hidden}
 (function(){
   try{
     var sec=document.getElementById('events'); if(!sec) return;
-    var tabs=[document.getElementById('evt-we'),document.getElementById('evt-you')];
-    var panels=[document.getElementById('evp-we'),document.getElementById('evp-you')];
+    var tabs=[document.getElementById('evt-you'),document.getElementById('evt-we')];
+    var panels=[document.getElementById('evp-you'),document.getElementById('evp-we')];
     var bars=tabs.map(function(b){ return b.querySelector('i s'); });
     var cur=0, hold=false, start=0, pausedAt=0, DUR=7000, still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
     function show(i){ cur=i;
@@ -1217,7 +1216,6 @@ main>section#menu[id]{overflow:hidden}
       start=performance.now(); pausedAt=0; }
     tabs.forEach(function(b,k){ b.addEventListener('click',function(){ show(k); });
       b.addEventListener('keydown',function(e){ if(/Arrow(Up|Down|Left|Right)/.test(e.key)){ e.preventDefault(); e.stopPropagation(); show(1-cur); tabs[cur].focus(); } }); });
-    sec.addEventListener('pointerenter',function(){ hold=true; }); sec.addEventListener('pointerleave',function(){ hold=false; });
     function tick(now){
       if(!still){
         var on=sec.classList.contains('on')&&!document.hidden;
