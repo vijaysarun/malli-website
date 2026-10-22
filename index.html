@@ -587,7 +587,25 @@ html{background:#0d1118; color-scheme:dark}
       <div><b>Cuisine</b><span>Indian, re-imagined</span></div>
     </div>
   </div>
-  <div class="mapw"><svg class="mapbg" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round"><g stroke-width="1" opacity=".22"><path d="M-20 70L620 110M-20 170L620 150M-20 290L620 330M-20 380L620 360"/><path d="M90-20L130 440M230-20L200 440M390-20L430 440M520-20L490 440"/></g><g stroke-width="2.2" opacity=".4"><path d="M-20 235C150 215 260 255 420 205S560 190 620 200"/><path d="M300-20C285 120 330 260 300 440"/></g><g stroke-width="1" opacity=".16"><circle cx="300" cy="215" r="70"/><circle cx="300" cy="215" r="130"/><circle cx="300" cy="215" r="200"/></g></g></svg><div class="mapc"><span class="pin" aria-hidden="true"></span><b>Malli</b><span>131 Oakview Commons Drive, Suite 109<br>Holly Springs, NC 27540</span><div class="mapb"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=131+Oakview+Commons+Drive+Suite+109+Holly+Springs+NC+27540" target="_blank" rel="noopener">Get directions</a><a href="https://www.google.com/maps/search/?api=1&amp;query=131+Oakview+Commons+Drive+Suite+109+Holly+Springs+NC+27540" target="_blank" rel="noopener">View on Google Maps</a></div></div></div>
+  <div class="mapx">
+    <span class="mapx-ring r1" aria-hidden="true"></span>
+    <span class="mapx-ring r2" aria-hidden="true"></span>
+    <svg class="mapx-fl top" viewBox="-100 -100 200 200" aria-hidden="true"><use href="#flower"/></svg>
+    <svg class="mapx-fl bl" viewBox="-100 -100 200 200" aria-hidden="true"><use href="#flower"/></svg>
+    <svg class="mapx-fl br" viewBox="-100 -100 200 200" aria-hidden="true"><use href="#flower"/></svg>
+    <div class="mapx-win">
+      <iframe title="Map showing Malli at 131 Oakview Commons Drive, Holly Springs, NC" src="https://maps.google.com/maps?q=131%20Oakview%20Commons%20Drive%20Suite%20109%2C%20Holly%20Springs%2C%20NC%2027540&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <span class="mapx-veil" aria-hidden="true"></span>
+    </div>
+    <div class="mapx-card">
+      <span class="mapx-pin" aria-hidden="true"></span>
+      <div class="mapx-addr"><b>Malli</b><span>131 Oakview Commons Dr, Suite 109 &middot; Holly Springs</span></div>
+      <div class="mapx-btns">
+        <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=131+Oakview+Commons+Drive+Suite+109+Holly+Springs+NC+27540" target="_blank" rel="noopener">Directions</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=131+Oakview+Commons+Drive+Suite+109+Holly+Springs+NC+27540" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 
@@ -1238,5 +1256,48 @@ main>section#menu[id]{overflow:hidden}
   #spaces .room{grid-template-rows:var(--sp-top,16rem) 1fr auto auto auto 1.4fr var(--sp-bot,24px)}
   #spaces .room h3{font-size:clamp(2.4rem,min(6vw,10vh),5.2rem)}
 }
+</style>
+<style>
+/* contact: live Google map in a frameless arch, with gold rings and jasmine ornaments around it */
+.mapx{position:relative; width:100%; height:min(66vh,560px); --arch:50% 50% 18px 18px / 30% 30% 18px 18px}
+@media(min-width:901px){ #contact .mapx{max-width:none} }
+.mapx-win{position:absolute; inset:0; border-radius:var(--arch); overflow:hidden; isolation:isolate; background:rgb(var(--navsolid)); box-shadow:0 40px 80px -40px rgba(0,0,0,.75)}
+.mapx-win iframe{position:absolute; inset:-2px; width:calc(100% + 4px); height:calc(100% + 4px); border:0; filter:invert(.9) hue-rotate(180deg) saturate(.45) brightness(.92) contrast(.95)}
+:root[data-p="white"] .mapx-win iframe{filter:sepia(.22) saturate(.85) contrast(.98)}
+.mapx-veil{position:absolute; inset:0; pointer-events:none; z-index:1; background:radial-gradient(ellipse 75% 70% at 50% 45%,transparent 55%,rgba(var(--navsolid),.55) 100%), linear-gradient(0deg,rgba(var(--navsolid),.75),transparent 32%); mix-blend-mode:normal}
+:root:not([data-p="white"]) .mapx-win::after{content:""; position:absolute; inset:0; z-index:1; pointer-events:none; background:color-mix(in srgb,var(--gold) 14%,transparent); mix-blend-mode:color}
+.mapx-ring{position:absolute; pointer-events:none; border-radius:var(--arch); border:1px solid color-mix(in srgb,var(--gold) 65%,transparent)}
+.mapx-ring.r1{inset:-12px}
+.mapx-ring.r2{inset:-22px; border-color:color-mix(in srgb,var(--gold) 28%,transparent); border-style:dashed}
+.mapx-fl{position:absolute; width:46px; height:46px; color:var(--gold); fill:color-mix(in srgb,var(--gold) 18%,transparent); stroke:var(--gold); stroke-width:3; pointer-events:none; filter:drop-shadow(0 0 10px color-mix(in srgb,var(--gold) 45%,transparent))}
+.mapx-fl.top{left:50%; top:-45px; margin-left:-23px; width:46px; animation:mxspin 40s linear infinite}
+.mapx-fl.bl{left:-38px; bottom:-38px; width:34px; height:34px}
+.mapx-fl.br{right:-38px; bottom:-38px; width:34px; height:34px}
+.mapx-fl.top{background:rgb(var(--navsolid)); border-radius:50%; padding:4px}
+@keyframes mxspin{to{transform:rotate(360deg)}}
+.mapx-card{position:absolute; z-index:2; left:50%; bottom:1.4rem; transform:translateX(-50%); width:max-content; max-width:calc(100% - 2.4rem); display:flex; align-items:center; gap:1rem; padding:.7rem .7rem .7rem 1.1rem; border-radius:999px; background:rgba(var(--navsolid),.86); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border:1px solid var(--line); box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
+.mapx-pin{flex:none; width:14px; height:14px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--gold); box-shadow:0 0 0 6px color-mix(in srgb,var(--gold) 18%,transparent); animation:mxpulse 2.4s ease-in-out infinite}
+@keyframes mxpulse{50%{box-shadow:0 0 0 11px color-mix(in srgb,var(--gold) 0%,transparent)}}
+.mapx-addr{display:flex; flex-direction:column; gap:.1rem; min-width:0}
+.mapx-addr b{font:400 1.15rem/1.1 var(--serif); color:var(--fg)}
+.mapx-addr span{font-size:.72rem; color:var(--fg-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.mapx-btns{display:flex; gap:.4rem; flex:none}
+.mapx-btns a{padding:.7rem 1rem; border-radius:999px; font:500 .58rem var(--sans); letter-spacing:.2em; text-transform:uppercase; color:var(--gold-soft); border:1px solid var(--line); transition:background .25s,color .25s,transform .25s}
+.mapx-btns a.dir{background:linear-gradient(135deg,var(--btn-a),var(--btn-b)); color:var(--btn-fg); border-color:transparent}
+.mapx-btns a:hover{transform:translateY(-1px); border-color:var(--gold)}
+/* entrance: rings and ornaments settle in when the page opens */
+#contact .mapx-ring,#contact .mapx-fl.bl,#contact .mapx-fl.br{opacity:0; transform:scale(.97); transition:opacity 1s ease .3s, transform 1.2s cubic-bezier(.2,.7,.2,1) .3s}
+#contact .mapx-ring.r2{transition-delay:.5s}
+#contact.on .mapx-ring,#contact.on .mapx-fl.bl,#contact.on .mapx-fl.br{opacity:1; transform:none}
+/* waitlist button: rounded and gold like the rest of the site */
+#contact .btns .btn.solid{border-radius:999px; padding:1rem 2rem; background:linear-gradient(135deg,var(--btn-a),var(--btn-b)); color:var(--btn-fg); border:0; box-shadow:0 14px 30px -14px color-mix(in srgb,var(--gold) 70%,transparent); transition:transform .25s, filter .25s}
+#contact .btns .btn.solid:hover{transform:translateY(-2px); filter:brightness(1.06); background:linear-gradient(135deg,var(--btn-a),var(--btn-b)); color:var(--btn-fg)}
+@media(min-width:901px){ #contact{padding-right:calc(var(--gut) + 22px)} }
+@media(max-width:900px){
+  .mapx{flex:none; height:340px; margin:3rem auto 1.6rem !important; width:calc(100% - 44px)}
+  .mapx-addr span{display:none}
+}
+@media(max-width:520px){ .mapx-addr{display:none} .mapx-card{gap:.6rem; padding:.55rem .55rem .55rem .9rem} .mapx-btns a{padding:.6rem .7rem; letter-spacing:.12em} }
+@media(prefers-reduced-motion:reduce){ .mapx-fl.top,.mapx-pin{animation:none} }
 </style>
 </body></html>

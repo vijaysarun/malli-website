@@ -29,7 +29,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 5. **Menu** – tabs for Small plates, Mains, Dessert and Cocktails, each with a short chapter intro. This is a sample menu; final dishes and prices are confirmed before opening.
 6. **Events** – heading across the top, then *You host* / *We host* stacked on the left and centered against the panel (You host shows first; they alternate every 7 seconds while the page is open; click either to choose), with a wide photo and details on the right that match the highlighted one. *We host*: An Evening of Wine & Spice in Gardenia (coming soon) over a black-and-white lamb karahi photo, with Reserve a spot and See past events buttons. *You host*: private events with 3, 5 or 7 course menus in the private dining room (PDR, up to 12) or Gardenia on the mezzanine (up to 36), buffets in Gardenia or booking the whole restaurant, with a one-week notice and Email operations / Call buttons.
 7. **Gallery** – five tiles shaped like the wall relief, cycling through room and dish photos (dahi vada, stuffed kebabs, lamb karahi, seekh kebabs, pani puri, grilled fish). Click any tile to open a full-screen lightbox.
-8. **Contact** – opening details, address, a stylised map with "Get directions" and "View on Google Maps" links, and a **Join the waitlist** button.
+8. **Contact** – opening details, address, a **Join the waitlist** button, and a live Google map set in a frameless arch with gold rings and jasmine ornaments around it, plus a floating card with Directions and Open in Maps buttons. In the dark palettes the map is tinted dark to match.
 
 ### Other features
 
@@ -47,6 +47,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 - **Photo in the white palette** – the white palette used to hide the homepage photo; it now shows it faintly, like a faded print behind the logo.
 - **New Events page** – redesigned as two equal-height panels (events we host / host your own) that follow all four palettes.
 - **Events switcher** – the two Events panels became a *We host | You host* switch with one panel at a time, alternating automatically.
+- **Contact map** – the drawn map was replaced with a live, interactive Google map in an ornamented arch; the waitlist button became a rounded gold button.
 - **Spaces room names moved up** – the row of room names now sits just under the *Five rooms* heading, with the selected room's details below it.
 - **New Events layout** – heading on top, stacked *We host / You host* tabs on the left, and a photo-and-details panel on the right (matches the latest mockup).
 - **Spaces layout fix** – on shorter laptop screens the room description overlapped the list of room names. The text now always sits between the heading and the list; on screens under about 820px tall the room names run in a row and the arrow buttons are hidden (names stay clickable and rooms still rotate automatically).
