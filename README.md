@@ -38,6 +38,7 @@ The site is a **paged, full-screen layout** rather than one long scrolling page.
 - **Search and sharing**: page title *Malli | Indian Reimagined | Holly Springs, NC*, a search description, tab icons, a share image for link previews (Open Graph and X/Twitter) and Restaurant details for Google (structured data: name, address, phone, email, cuisine, Instagram).
 - **Image descriptions**: the main photos are real images with alt text; gallery tiles carry descriptive labels.
 - **Responsive** layouts for desktop, tablet and phone.
+- **Phone order/reserve bar**: on phones only, a rounded bar slides up from the bottom with *Order Online* and *Reserve a Table* (both go to Contact until ordering and reservations open). The header buttons and footer are hidden on phones to make room.
 - **Reduced motion**: animations switch off for visitors who have that setting turned on in their device.
 - Footer links to Instagram ([@malli.indian](https://www.instagram.com/malli.indian/)), phone and [mallinc.us](https://mallinc.us/).
 
